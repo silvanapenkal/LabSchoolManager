@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "eslint src/**/*.{js,jsx}",
     "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.0.0",
     "bootstrap": "^5.2.3",
-    "lint": "eslint src/**/*.{js,jsx}",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
