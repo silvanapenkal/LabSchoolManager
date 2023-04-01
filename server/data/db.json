@@ -1,4 +1,34 @@
 {
-    "cursos": ["1"]
-}
-   
+    "users": [
+      {
+        "email": "usuario@teste.com.br",
+        "password": "$2a$10$BmakfCEiDXPHjpAY.oriKOnm0.qmRYYW3Ny1a4FqdvLfzvk4Vj0qm",
+        "name": "Pedagoga teste",
+        "phone": "(99) 99999-9999",
+        "birthdate": "01/01/1990",
+        "cpf": "999.999.999-99",
+        "id": 2
+      }
+    ],
+    "students": [
+      {
+        "name": "Teste aluno",
+        "phone": "(99) 99999-9999",
+        "birthdate": "01/01/1990",
+        "cpf": "999.999.999-99",
+        "grade": 80,
+        "id": 3
+      }
+    ],
+    "accompaniments": [
+      {
+        "id": 1,
+        "studentId": 3,
+        "userId": 2,
+        "date": "27/03/2023",
+        "title": "Acompanhamento teste",
+        "description": "Descrição do acompanhamento",
+        "finished": true
+      }
+    ]
+  }
