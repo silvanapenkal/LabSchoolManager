@@ -1,86 +1,13 @@
 {
   "users": [
     {
-      "email": "usuario@teste.com.br",
-      "password": "$2a$10$BmakfCEiDXPHjpAY.oriKOnm0.qmRYYW3Ny1a4FqdvLfzvk4Vj0qm",
-      "name": "Pedagoga teste",
-      "phone": "(99) 99999-9999",
-      "birthDate": "01/01/1990",
-      "cpf": "999.999.999-99",
-      "id": 2
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "phone": "",
-      "birthDate": "",
-      "cpf": "",
-      "id": 3
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "phone": "",
-      "birthDate": "",
-      "cpf": "",
-      "id": 4
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "phone": "",
-      "birthdate": "",
-      "cpf": "",
-      "birthDate": "1977-01-22",
-      "id": 5
-    },
-    {
       "email": "silvanapenkal@gmail.com",
-      "password": "fladjfalsjd",
-      "name": "Nome",
-      "phone": "tel",
+      "password": "$2a$10$W8Ks2Dt1cQFp5qv/0NJVmOOfh9k5v88Wng0AUZ4.rre6quYY.rW6e",
+      "name": "SILVANA PENKAL SANTOS",
+      "phone": "2430653237",
       "birthDate": "1977-01-14",
-      "cpf": "919.192.749-87",
-      "id": 6
-    },
-    {
-      "email": "silvanapenkal@gmail.com",
-      "password": "fladjfalsjd",
-      "name": "Nome",
-      "phone": "tel",
-      "birthDate": "1977-01-14",
-      "cpf": "919.192.749-87",
-      "id": 7
-    },
-    {
-      "email": "silvanapenkal@gmail.com",
-      "password": "tchau",
-      "name": "Joaquim Rogério Santos Roumeliotis ",
-      "phone": "2430653237",
-      "birthDate": "2010-01-02",
       "cpf": "02539158994",
-      "id": 8
-    },
-    {
-      "email": "silvanapenkal@gmail.com",
-      "password": "tchau",
-      "name": "Joaquim Rogério Santos Roumeliotis ",
-      "phone": "2430653237",
-      "birthDate": "2010-01-02",
-      "cpf": "02539158994",
-      "id": 9
-    },
-    {
-      "email": "silvanapenkal@gmail.com",
-      "password": "tchau",
-      "name": "Joaquim Rogério Santos Roumeliotis ",
-      "phone": "2430653237",
-      "birthDate": "2010-01-02",
-      "cpf": "02539158994",
-      "id": 10
+      "id": 1
     }
   ],
   "students": [

@@ -3,11 +3,13 @@ import UserRegister from "./pages/userRegister/userRegister";
 import Login from "./pages/login/login";
 import { GlobalStateProvider } from "./hooks/useGlobalState";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [globalState, setGlobalState] = useState();
 
   return (
-    <GlobalStateProvider>
+    <GlobalStateProvider value={[globalState, setGlobalState]}>
       <BrowserRouter>
         <div className="App">
           <Routes>

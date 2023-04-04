@@ -1,12 +1,13 @@
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
-import { StyledCard } from "./styles";
+import { ButtonDiv, StyledCard, StyledForm } from "./styles";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
@@ -20,6 +21,7 @@ const schema = yup.object().shape({
 function UserRegister() {
   // eslint-disable-next-line no-unused-vars
   const [content, setContent] = useState({ value: "", error: "" });
+  const navigate = useNavigate();
 
   const {
     register,
@@ -49,7 +51,7 @@ function UserRegister() {
     <PageWrapper>
       <StyledCard>
         <h1 className="register-page-section-title">Cadastro de usuário</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
           <Input
             labelText="Nome"
             placeholder="Digite seu nome"
@@ -92,9 +94,13 @@ function UserRegister() {
             helperText={errors?.password?.message}
             {...register("password")}
           />
-          <Button type="submit">Cadastrar</Button>
-          <Button type="reset">Cancelar</Button>
-        </form>
+          <ButtonDiv>
+            <Button type="submit">Cadastrar</Button>
+            <Button type="button" onClick={() => navigate("/")}>
+              Cancelar
+            </Button>
+          </ButtonDiv>
+        </StyledForm>
       </StyledCard>
     </PageWrapper>
   );

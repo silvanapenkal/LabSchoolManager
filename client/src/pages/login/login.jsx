@@ -2,11 +2,13 @@ import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
 import Logo from "../../components/logo/logo";
+import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 import useUserRegister from "../../hooks/useUserRegister";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [showEmailHelper, setShowEmailHelper] = useState(false);
 
@@ -63,7 +65,7 @@ function Login() {
         <Button onClick={handleLoginAction} disabled={loading}>
           Entrar
         </Button>
-        <Button type="reset">Cadastrar novo usuário</Button>
+        <Button onClick={() => navigate("/register")}>Cadastrar</Button>
       </form>
     </PageWrapper>
   );

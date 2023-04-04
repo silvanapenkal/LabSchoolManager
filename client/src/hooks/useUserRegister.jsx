@@ -11,7 +11,7 @@ const useUserRegister = () => {
 
   const registerUser = async (course) => {
     setIsSubmitting(true)
-    const response = await apiService.post('/users', course)
+    const response = await apiService.post('/register', course)
     console.log(response)
     setError(response.error)
     setData(response.data)

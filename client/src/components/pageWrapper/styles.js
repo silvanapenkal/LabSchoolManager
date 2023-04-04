@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledPage = styled.div`
-  padding: 40px 8px;
+  padding: 8px 8px;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content:center;
   align-items:center;
   flex-grow: 1;
 `;

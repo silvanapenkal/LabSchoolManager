@@ -4,7 +4,7 @@ import { ButtonDiv, LineDiv, StyledDiv, ToolBarDiv } from "./styles";
 
 function Toolbar() {
   return (
-    <ToolBarDiv class='toolbar'>
+    <ToolBarDiv className='toolbar'>
       <LineDiv>
         <StyledDiv>
         <Logo />
