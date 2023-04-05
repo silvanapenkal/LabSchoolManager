@@ -5,7 +5,8 @@ import Logo from "../../components/logo/logo";
 import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
-import useUserRegister from "../../hooks/useUserRegister";
+
+import { useAuthenticationContext } from "../../hooks/useAuthentication";
 
 function Login() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [showPasswordHelper, setShowPasswordHelper] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
@@ -29,25 +31,29 @@ function Login() {
     setPassword(newPassword);
   };
 
-  const handleLoginAction = async () => {
+  const { login } = useAuthenticationContext();
+
+  const handleLoginAction = async (event) => {
+    event.preventDefault();
     setError(null);
+    
     setShowEmailHelper(!email);
     setShowPasswordHelper(!password);
+    console.log("oi");
     if (!email || !password) {
       return;
     }
     setLoading(true);
-
+    login(email, password)
     setLoading(false);
   };
 
-  // eslint-disable-next-line no-unused-vars
-  const { isSubmitting, registerUser } = useUserRegister();
+
 
   return (
     <PageWrapper>
       <Logo />
-      <form>
+      <form onSubmit={handleLoginAction}>
         <Input
           labelText="E-mail"
           type="email"
@@ -62,10 +68,10 @@ function Login() {
           onChange={handleChangePassword}
           helperText={showPasswordHelper ? "Campo obrigatório" : ""}
         />
-        <Button onClick={handleLoginAction} disabled={loading}>
+        <Button>
           Entrar
         </Button>
-        <Button onClick={() => navigate("/register")}>Cadastrar</Button>
+        <Button type="button" onClick={() => navigate("/register")}>Cadastrar</Button>
       </form>
     </PageWrapper>
   );

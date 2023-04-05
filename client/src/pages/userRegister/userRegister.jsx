@@ -40,10 +40,10 @@ function UserRegister() {
   });
 
   // eslint-disable-next-line no-unused-vars
-  const { isSubmitting, registerUser } = useUserRegister();
+  const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    registerUser(data);
+    postRequest('/register', data);
     console.log(data);
   };
 

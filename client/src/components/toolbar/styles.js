@@ -8,7 +8,7 @@ export const ToolBarDiv = styled.div`
   justify-content: space-between;
   background-color: aquamarine;
   width: 100vw;
-  height: 100px;
+  padding-left: 16px;
 `;
 
 export const LineDiv = styled.div`

@@ -8,6 +8,33 @@
       "birthDate": "1977-01-14",
       "cpf": "02539158994",
       "id": 1
+    },
+    {
+      "email": "ivan@gmail.com",
+      "password": "$2a$10$f9LaHBAB.lGtpBR3kqSEauQmh1aEDDw.1BB1OaJHABoakHtz9adei",
+      "name": "ivan",
+      "phone": "2430653237",
+      "birthDate": "1977-01-14",
+      "cpf": "91919274987",
+      "id": 2
+    },
+    {
+      "email": "teste@teste.com",
+      "password": "$2a$10$IKU1fm7HUxUmHaTWzEJ3re2mXlEysv06KBh/PbFSGlKc5Zx/7.t9i",
+      "name": "Teste",
+      "phone": "014",
+      "birthDate": "1977-01-14",
+      "cpf": "02539158994",
+      "id": 3
+    },
+    {
+      "email": "teste@teste.com.br",
+      "password": "$2a$10$74eBEYRmKaUEYWVNkTh9C.swXsQ6zIo6GiYGHfqFDNt0o8ywyk1RO",
+      "name": "Teste",
+      "phone": "014",
+      "birthDate": "1977-01-14",
+      "cpf": "02539158994",
+      "id": 4
     }
   ],
   "students": [
