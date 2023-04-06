@@ -39,7 +39,6 @@ function Login() {
     
     setShowEmailHelper(!email);
     setShowPasswordHelper(!password);
-    console.log("oi");
     if (!email || !password) {
       return;
     }

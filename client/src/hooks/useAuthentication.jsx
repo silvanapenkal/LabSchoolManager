@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { createContext, useContext, useState } from "react";
 import useUserRegister from "./useUserRegister";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +9,6 @@ export function useAuthenticationContext() {
   return useContext(AuthenticationContext);
 }
 
-// eslint-disable-next-line react/prop-types
 export const AuthenticationProvider = ({ children }) => {
 
   const navigate = useNavigate();
@@ -30,9 +30,15 @@ export const AuthenticationProvider = ({ children }) => {
     localStorage.removeItem("token");
     setUser(null);
   };
+  
   return (
     <AuthenticationContext.Provider value={{ login, logout, user }}>
       {children}
     </AuthenticationContext.Provider>
   );
 };
+
+
+AuthenticationProvider.propTypes = {
+  children: PropTypes.node.isRequired
+}
