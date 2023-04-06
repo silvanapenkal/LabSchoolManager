@@ -10,16 +10,17 @@ function App() {
       <AuthenticationProvider>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route
               path="/register"
               element={
                 <>
-                  <Toolbar />
                   <UserRegister />
                 </>
               }
             />
+            <Route path="/student"
+            element = {<Toolbar />} />
           </Routes>
         </div>
       </AuthenticationProvider>
