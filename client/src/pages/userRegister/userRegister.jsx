@@ -3,7 +3,6 @@ import Input from "../../components/input/input";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
 import { ButtonDiv, StyledCard, StyledForm } from "./styles";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -14,13 +13,12 @@ const schema = yup.object().shape({
   email: yup.string().email("Deve ser um e-mail").required("Campo obrigatório"),
   birthDate: yup.string().required("Campo obrigatório"),
   cpf: yup.string().required("Campo obrigatório"),
-  password: yup.string().required("Campo obrigatório"),
+  password: yup.string().required("Campo obrigatório").min(8),
   phone: yup.string().required("Campo obrigatório"),
 });
 
 function UserRegister() {
-  // eslint-disable-next-line no-unused-vars
-  const [content, setContent] = useState({ value: "", error: "" });
+  
   const navigate = useNavigate();
 
   const {
@@ -44,7 +42,6 @@ function UserRegister() {
 
   const onSubmit = (data) => {
     postRequest('/register', data);
-    console.log(data);
   };
 
   return (
@@ -96,7 +93,7 @@ function UserRegister() {
           />
           <ButtonDiv>
             <Button type="submit">Cadastrar</Button>
-            <Button type="button" onClick={() => navigate("/")}>
+            <Button type="button" onClick={() => navigate("/login")}>
               Cancelar
             </Button>
           </ButtonDiv>

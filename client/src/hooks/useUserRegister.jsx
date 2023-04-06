@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { apiService } from "../services/api";
 
 const useUserRegister = () => {
@@ -10,7 +9,6 @@ const useUserRegister = () => {
   const postRequest = async (path, body) => {
     setIsSubmitting(true);
     const response = await apiService.post(path, body);
-    console.log(response);
     setError(response.error);
     setData(response.data);
     setIsSubmitting(false);
