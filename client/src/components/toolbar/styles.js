@@ -3,20 +3,12 @@ import styled from "styled-components";
 export const ToolBarDiv = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: aquamarine;
-  width: 100vw;
-  padding-left: 16px;
-`;
-
-export const LineDiv = styled.div`
-  box-sizing: border-box;
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   background-color: aquamarine;
+  padding: 16px;
+  width: 100vw;
 `;
 
 export const StyledDiv = styled.div`
@@ -24,7 +16,7 @@ export const StyledDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const ButtonDiv = styled.div`
