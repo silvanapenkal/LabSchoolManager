@@ -1,12 +1,30 @@
+import Toolbar from "./components/toolbar/toolbar";
+import UserRegister from "./pages/userRegister/userRegister";
+import Login from "./pages/login/login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthenticationProvider } from "./hooks/useAuthentication";
 
 function App() {
-
   return (
-    <div className="App">
-      <img src='./school.svg' aria-label="school" width="80px"/>
-      <h1>LabSchoolManager</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <AuthenticationProvider>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route
+              path="/register"
+              element={
+                <>
+                  <Toolbar />
+                  <UserRegister />
+                </>
+              }
+            />
+          </Routes>
+        </div>
+      </AuthenticationProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
