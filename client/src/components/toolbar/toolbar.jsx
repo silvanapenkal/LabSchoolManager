@@ -1,10 +1,12 @@
+import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import Button from "../button/button";
 import Logo from "../logo/logo";
 import { ButtonDiv, LineDiv, StyledDiv, ToolBarDiv } from "./styles";
 
 function Toolbar() {
+    const {user} = useAuthenticationContext();
   return (
-    <ToolBarDiv class='toolbar'>
+    <ToolBarDiv>
       <LineDiv>
         <StyledDiv>
         <Logo />
@@ -32,7 +34,7 @@ function Toolbar() {
           </Button>
         </ButtonDiv>
         </StyledDiv>
-        <h4>Silvana Penkal Santos</h4>
+        <h4>{user.name}</h4>
       </LineDiv>
     </ToolBarDiv>
   );

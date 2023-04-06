@@ -4,8 +4,7 @@
   "description": "Servidor do projeto LabSchoolManager",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "start": "json-server --watch data/db.json --port=8081"
+    "dev": "json-server-auth data/db.json -r routes.json --port 8081"
   },
   "author": "Silvana Penkal Santos",
   "license": "ISC",
