@@ -41,13 +41,9 @@ function StudentRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    console.log("oi");
-    console.log(data);
     const token = localStorage.getItem("token");
-    console.log(token);
-    
-    console.log();
     postRequest('/students', {Headers: {Authorization: `Bearer ${token}`}, Body: {data}});
+    navigate("/home");
   };
 
   return (
@@ -87,7 +83,7 @@ function StudentRegister() {
           />     
           <ButtonDiv>
             <Button type="submit" onSubmit={handleSubmit(onSubmit)}>Cadastrar</Button>
-            <Button type="button" onClick={() => navigate("/")}>
+            <Button type="button" onClick={() => navigate("/home")}>
               Cancelar
             </Button>
           </ButtonDiv>

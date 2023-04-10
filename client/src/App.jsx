@@ -4,6 +4,7 @@ import Login from "./pages/login/login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthenticationProvider } from "./hooks/useAuthentication";
 import StudentRegister from "./pages/studentRegister/studentRegister";
+import AccompanimentRegister from "./pages/accompanimentRegister/accompanimentRegister";
 
 function App() {
   return (
@@ -19,6 +20,23 @@ function App() {
                 <>
                   <Toolbar />
                   <StudentRegister />
+                </>
+              }
+            />
+          <Route
+              path="/accompaniment"
+              element={
+                <>
+                  <Toolbar />
+                  <AccompanimentRegister />
+                </>
+              }
+            />
+            <Route
+              path="/home"
+              element={
+                <>
+                  <Toolbar />
                 </>
               }
             />

@@ -2,29 +2,38 @@ import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import Button from "../button/button";
 import Logo from "../logo/logo";
 import { ButtonDiv, StyledDiv, ToolBarDiv } from "./styles";
+import { useNavigate } from "react-router-dom";
+
 
 function Toolbar() {
   const { user, logout } = useAuthenticationContext();
+  const navigate = useNavigate();
+
+  const handleNavigateStudentRegister = () => {
+    navigate('/student')
+  }
+
+
   return (
     <ToolBarDiv>
         <StyledDiv>
           <Logo />
           <ButtonDiv>
-            <Button>
+            <Button type="button" onClick={handleNavigateStudentRegister}>
               <img
                 src="../../src/assets/student.svg"
                 aria-label="alunos"
                 width="32px"
               />
             </Button>
-            <Button>
+            <Button type="button" onClick={navigate("/accompaniment")}>
               <img
                 src="../../src/assets/accompaniment.svg"
                 aria-label="acompanhamento pedagógico"
                 width="32px"
               />
             </Button>
-            <Button onClick={logout}>
+            <Button type="button" onClick={logout()}>
               <img
                 src="../../src/assets/logout.svg"
                 aria-label="sair"
