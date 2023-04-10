@@ -11,14 +11,13 @@ import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
-  email: yup.string().email("Deve ser um e-mail").required("Campo obrigatório"),
+  grade: yup.number("Deve ser um número").required("Campo obrigatório"),
   birthDate: yup.string().required("Campo obrigatório"),
   cpf: yup.string().required("Campo obrigatório"),
-  password: yup.string().required("Campo obrigatório"),
   phone: yup.string().required("Campo obrigatório"),
 });
 
-function UserRegister() {
+function StudentRegister() {
   // eslint-disable-next-line no-unused-vars
   const [content, setContent] = useState({ value: "", error: "" });
   const navigate = useNavigate();
@@ -29,8 +28,7 @@ function UserRegister() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "",
-      password: "",
+      grade: "",
       name: "",
       phone: "",
       birthDate: "",
@@ -43,13 +41,19 @@ function UserRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    postRequest('/register', data);
+    console.log("oi");
+    console.log(data);
+    const token = localStorage.getItem("token");
+    console.log(token);
+    
+    console.log();
+    postRequest('/students', {Headers: {Authorization: `Bearer ${token}`}, Body: {data}});
   };
 
   return (
     <PageWrapper>
       <StyledCard>
-        <h1 className="register-page-section-title">Cadastro de usuário</h1>
+        <h1 className="register-page-section-title">Cadastro de Aluno</h1>
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
           <Input
             labelText="Nome"
@@ -76,25 +80,13 @@ function UserRegister() {
             {...register("cpf")}
           />
           <Input
-            labelText="E-mail"
-            type="email"
+            labelText="Nota"
+            type="number"
             helperText={errors?.email?.message}
-            {...register("email")}
-          />
-          <Input
-            labelText="Senha"
-            type="password"
-            helperText={errors?.password?.message}
-            {...register("password")}
-          />
-          <Input
-            labelText="Confirme a senha"
-            type="password"
-            helperText={errors?.password?.message}
-            {...register("password")}
-          />
+            {...register("grade")}
+          />     
           <ButtonDiv>
-            <Button type="submit">Cadastrar</Button>
+            <Button type="submit" onSubmit={handleSubmit(onSubmit)}>Cadastrar</Button>
             <Button type="button" onClick={() => navigate("/")}>
               Cancelar
             </Button>
@@ -105,4 +97,4 @@ function UserRegister() {
   );
 }
 
-export default UserRegister;
+export default StudentRegister;

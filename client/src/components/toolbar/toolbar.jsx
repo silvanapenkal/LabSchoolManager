@@ -4,7 +4,7 @@ import Logo from "../logo/logo";
 import { ButtonDiv, StyledDiv, ToolBarDiv } from "./styles";
 
 function Toolbar() {
-  const { user } = useAuthenticationContext();
+  const { user, logout } = useAuthenticationContext();
   return (
     <ToolBarDiv>
         <StyledDiv>
@@ -24,7 +24,7 @@ function Toolbar() {
                 width="32px"
               />
             </Button>
-            <Button>
+            <Button onClick={logout}>
               <img
                 src="../../src/assets/logout.svg"
                 aria-label="sair"

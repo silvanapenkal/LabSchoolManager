@@ -3,6 +3,7 @@ import UserRegister from "./pages/userRegister/userRegister";
 import Login from "./pages/login/login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthenticationProvider } from "./hooks/useAuthentication";
+import StudentRegister from "./pages/studentRegister/studentRegister";
 
 function App() {
   return (
@@ -11,16 +12,16 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<UserRegister />} />
             <Route
-              path="/register"
+              path="/student"
               element={
                 <>
-                  <UserRegister />
+                  <Toolbar />
+                  <StudentRegister />
                 </>
               }
             />
-            <Route path="/student"
-            element = {<Toolbar />} />
           </Routes>
         </div>
       </AuthenticationProvider>
