@@ -3,9 +3,7 @@ import Input from "../../components/input/input";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
 import Logo from "../../components/logo/logo";
 import { useNavigate } from "react-router-dom";
-
 import { useState } from "react";
-
 import { useAuthenticationContext } from "../../hooks/useAuthentication";
 
 function Login() {
@@ -43,11 +41,9 @@ function Login() {
       return;
     }
     setLoading(true);
-    login(email, password)
+    login(email, password);
     setLoading(false);
   };
-
-
 
   return (
     <PageWrapper>
@@ -70,7 +66,7 @@ function Login() {
         <Button>
           Entrar
         </Button>
-        <Button type="button" onClick={() => navigate("/register")}>Cadastrar</Button>
+        <Button type="button" onClick={() => navigate("/home")}>Cadastrar</Button>
       </form>
     </PageWrapper>
   );

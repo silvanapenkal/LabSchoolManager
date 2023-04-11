@@ -20,15 +20,16 @@ export const AuthenticationProvider = ({ children }) => {
   const login = async (email, password) => {
     const data = await postRequest("/login", {email, password})
     if (data) {
-      setUser({id: data.user.id, name: data.user.name})
-      localStorage.setItem("token",data.accessToken)
-      navigate('/register')
+      setUser({id: data.user.id, name: data.user.name});
+      localStorage.setItem("token",data.accessToken);
+      navigate('/register');
     }
   };
 
   const logout = () => {
     localStorage.removeItem("token");
     setUser(null);
+    navigate('/login');
   };
   
   return (
