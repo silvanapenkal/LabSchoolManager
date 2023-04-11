@@ -3,7 +3,7 @@ import {StyledButton} from './styles'
 
 function Button({children, isIconButton = false, ...props}) {
     return (
-    <StyledButton className={`button ${isIconButton ? 'icon-button' : ''}`}>{children}</StyledButton>);
+    <StyledButton className={`button ${isIconButton ? 'icon-button' : ''}`} props>{children}</StyledButton>);
 }
 
 Button.propTypes = {
