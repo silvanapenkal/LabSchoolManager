@@ -8,6 +8,7 @@ import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../components/logo/logo"
 
 const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
@@ -44,10 +45,12 @@ function UserRegister() {
 
   const onSubmit = (data) => {
     postRequest('/register', data);
+    navigate('/student');
   };
 
   return (
     <PageWrapper>
+      <Logo />
       <StyledCard>
         <h1 className="register-page-section-title">Cadastro de usuário</h1>
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
@@ -95,7 +98,7 @@ function UserRegister() {
           />
           <ButtonDiv>
             <Button type="submit">Cadastrar</Button>
-            <Button type="button" onClick={() => navigate("/")}>
+            <Button type="button" onClick={() => navigate("/login")}>
               Cancelar
             </Button>
           </ButtonDiv>

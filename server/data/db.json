@@ -44,6 +44,24 @@
       "birthDate": "1977-01-14",
       "cpf": "02539158994",
       "id": 5
+    },
+    {
+      "email": "sil@teste.com.br",
+      "password": "$2a$10$JdoWvS7mm51XUkgNZU2yteEgqr8QQRnUI8aJUyHNBFoZbTs2UOChq",
+      "name": "SILVANA PENKAL SANTOS 3",
+      "phone": "2430653237",
+      "birthDate": "1977-01-14",
+      "cpf": "032.683.409-91",
+      "id": 6
+    },
+    {
+      "email": "teste@teste.br",
+      "password": "$2a$10$jKL4OJoDMbcJMeJnUNLap.QQ1kiLJca/dOiEHxD7xPdudNBD.ONBm",
+      "name": "teste",
+      "phone": "2430653237",
+      "birthDate": "12002-10-01",
+      "cpf": "919.192.749-87",
+      "id": 7
     }
   ],
   "students": [
@@ -85,6 +103,22 @@
         }
       },
       "id": 6
+    },
+    {
+      "Headers": {
+        "Authorization": "Bearer null"
+      },
+      "Body": {
+        "data": {
+          "finished": false,
+          "description": "teste de atendimento",
+          "title": "teste 2",
+          "date": "2023-04-11",
+          "userId": 1,
+          "studentId": 1
+        }
+      },
+      "id": 7
     }
   ],
   "accompaniments": [
