@@ -8,7 +8,6 @@ const api = axios.create({
 const handleGet = async (endpoint) => {
   try {
     const response = await api.get(endpoint)
-
     return { data: response.data, error: null }
   } catch (error) {
     return { data: null, error: error.message }
@@ -18,7 +17,6 @@ const handleGet = async (endpoint) => {
 const handlePost = async (endpoint, data) => {
   try {
     const response = await api.post(endpoint, data)
-
     return { data: response.data, error: null }
   } catch (error) {
     return { data: null, error: error.message }
@@ -28,7 +26,6 @@ const handlePost = async (endpoint, data) => {
 const handlePut = async (endpoint, data) => {
   try {
     const response = await api.put(endpoint, data)
-
     return { data: response.data, error: null }
   } catch (error) {
     return { data: null, error: error.message }
@@ -38,7 +35,6 @@ const handlePut = async (endpoint, data) => {
 const handleDelete = async (endpoint) => {
   try {
     const response = await api.delete(endpoint)
-
     return { data: response.data, error: null }
   } catch (error) {
     return { data: null, error: error.message }

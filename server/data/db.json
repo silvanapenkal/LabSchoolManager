@@ -62,6 +62,15 @@
       "birthDate": "12002-10-01",
       "cpf": "919.192.749-87",
       "id": 7
+    },
+    {
+      "email": "sil2@teste.com.br",
+      "password": "$2a$10$VbKCHFmXP4UpCl8jSnJX1eSWjAwyrj7nem1NotUPOoE.0Lc9ktjIa",
+      "name": "SILVANA PENKAL SANTOS",
+      "phone": "2430653237",
+      "birthDate": "1977-01-14",
+      "cpf": "919.192.749-87",
+      "id": 8
     }
   ],
   "students": [
@@ -119,6 +128,14 @@
         }
       },
       "id": 7
+    },
+    {
+      "phone": "47991306919",
+      "cpf": "02539158994",
+      "birthDate": "2010-01-02",
+      "grade": 10,
+      "name": "Joaquim Rogério Santos Roumeliotis ",
+      "id": 8
     }
   ],
   "accompaniments": [
@@ -130,6 +147,15 @@
       "title": "Acompanhamento teste",
       "description": "Descrição do acompanhamento",
       "finished": true
+    },
+    {
+      "finished": false,
+      "description": "atendimento",
+      "title": "primeiro",
+      "date": "2023-04-14",
+      "userId": 1,
+      "studentId": 1,
+      "id": 2
     }
   ]
 }

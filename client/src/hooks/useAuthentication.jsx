@@ -22,7 +22,7 @@ export const AuthenticationProvider = ({ children }) => {
     if (data) {
       setUser({id: data.user.id, name: data.user.name});
       localStorage.setItem("token",data.accessToken);
-      navigate('/register');
+      navigate('/home');
     }
   };
 

@@ -43,8 +43,7 @@ function AccompanimentRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    const token = localStorage.getItem("token");    
-    postRequest('/accompaniments', {Headers: {Authorization: `Bearer ${token}`}, Body: {data}});
+    postRequest('/accompaniments', data);
     navigate("/home");
   };
 

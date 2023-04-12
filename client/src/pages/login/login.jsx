@@ -66,7 +66,7 @@ function Login() {
         <Button>
           Entrar
         </Button>
-        <Button type="button" onClick={() => navigate("/home")}>Cadastrar</Button>
+        <Button type="button" onClick={() => navigate("/register")}>Cadastrar</Button>
       </form>
     </PageWrapper>
   );
