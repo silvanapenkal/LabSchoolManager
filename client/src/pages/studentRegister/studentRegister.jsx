@@ -41,8 +41,7 @@ function StudentRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    const token = localStorage.getItem("token");
-    postRequest('/students', {Headers: {Authorization: `Bearer ${token}`}, Body: {data}});
+    postRequest('/students', data);
     navigate("/home");
   };
 
