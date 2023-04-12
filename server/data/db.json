@@ -136,6 +136,14 @@
       "grade": 10,
       "name": "Joaquim Rogério Santos Roumeliotis ",
       "id": 8
+    },
+    {
+      "phone": "47991306919",
+      "cpf": "02539158994",
+      "birthDate": "2006-06-12",
+      "grade": 100,
+      "name": "Heitor",
+      "id": 9
     }
   ],
   "accompaniments": [
