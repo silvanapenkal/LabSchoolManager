@@ -1,9 +1,16 @@
 
 import { StyledCard } from "./styles";
+import PropTypes from 'prop-types'
 
-function Card() {
+function Card({children}) {
   return (
-    <StyledCard/>
+    <StyledCard>
+      {children}
+    </StyledCard>
   );}
+
+  Card.propTypes = {
+    children: PropTypes.node.isRequired
+  }
 
 export default Card

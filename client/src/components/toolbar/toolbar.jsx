@@ -15,7 +15,7 @@ function Toolbar() {
         <StyledDiv>
           <Logo />
           <ButtonDiv>
-            <Button type="button" onClick={() => navigate('/student')}>
+            <Button type="button" onClick={() => navigate('/alunos')}>
               <img
                 src="../../src/assets/student.svg"
                 aria-label="alunos"
