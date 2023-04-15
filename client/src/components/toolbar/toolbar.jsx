@@ -22,7 +22,7 @@ function Toolbar() {
                 width="32px"
               />
             </Button>
-            <Button type="button" onClick={() => navigate("/accompaniment")}>
+            <Button type="button" onClick={() => navigate("/acompanhamentos")}>
               <img
                 src="../../src/assets/accompaniment.svg"
                 aria-label="acompanhamento pedagógico"

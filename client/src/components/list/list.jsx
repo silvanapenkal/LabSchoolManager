@@ -14,11 +14,10 @@ function List({ list }) {
             birthDate={item.birthDate}
             grade={item.grade}
           >
-            <p>{item.id}</p>
-            <p>{item.name}</p>
-            <p>{item.phone}</p>
-            <p>{item.birthDate}</p>
-            <p>{item.grade}</p>
+            <p>Nome: {item.name}</p>
+            <p>Telefone: {item.phone}</p>
+            <p>Data de Nascimento: {item.birthDate}</p>
+            <p>Nota: {item.grade}</p>
           </Card>
         </li>
       ))}

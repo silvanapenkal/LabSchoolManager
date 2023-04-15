@@ -6,6 +6,7 @@ import { AuthenticationProvider } from "./hooks/useAuthentication";
 import StudentRegister from "./pages/studentRegister/studentRegister";
 import AccompanimentRegister from "./pages/accompanimentRegister/accompanimentRegister";
 import StudentList from "./pages/studentList/studentList";
+import AccompanimentListPage from "./pages/accompanimentListPage/accompanimentListPage";
 
 function App() {
   return (
@@ -45,9 +46,13 @@ function App() {
             <Route
               path="/alunos"
               element={
-                <>
                   <StudentList />
-                </>
+              }
+            />
+              <Route
+              path="/acompanhamentos"
+              element={
+                  <AccompanimentListPage />
               }
             />
           </Routes>
