@@ -8,15 +8,13 @@ import { useNavigate } from "react-router-dom";
 
 function StudentList() {
   const navigate = useNavigate();
-  const { data, error, isLoading } = useList();
-  console.log(error)
-  console.log(isLoading)
-  console.log(data)
+  const { data, error, isLoading, fetchData } = useList();
+
   return (
     <>
       <Toolbar />
       <PageWrapper>
-        <Filter />
+        <Filter onFilter={fetchData} />
 
         {isLoading && <h1>Carregando...</h1>}
 
