@@ -85,7 +85,7 @@
     {
       "name": "Teste aluno 8",
       "phone": "(99) 99999-9998",
-      "birthdate": "01/01/1998",
+      "birthDate": "01/01/1998",
       "cpf": "999.999.999-98",
       "grade": 80,
       "id": 4
@@ -93,41 +93,10 @@
     {
       "name": "Teste aluno 8",
       "phone": "(99) 99999-9998",
-      "birthdate": "01/01/1998",
+      "birthDate": "01/01/1998",
       "cpf": "999.999.999-98",
       "grade": 80,
       "id": 5
-    },
-    {
-      "Headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbS5iciIsImlhdCI6MTY4MTE1ODI4OCwiZXhwIjoxNjgxMTYxODg4LCJzdWIiOiI0In0.A8K4GwiVu1ULXzfsNAOUGu_Xve7943laoMIQds72dTQ"
-      },
-      "Body": {
-        "data": {
-          "phone": "(47) 99130-6919",
-          "cpf": "11111111111",
-          "birthDate": "1977-01-14",
-          "grade": 100,
-          "name": "aluno teste"
-        }
-      },
-      "id": 6
-    },
-    {
-      "Headers": {
-        "Authorization": "Bearer null"
-      },
-      "Body": {
-        "data": {
-          "finished": false,
-          "description": "teste de atendimento",
-          "title": "teste 2",
-          "date": "2023-04-11",
-          "userId": 1,
-          "studentId": 1
-        }
-      },
-      "id": 7
     },
     {
       "phone": "47991306919",
@@ -144,6 +113,14 @@
       "grade": 100,
       "name": "Heitor",
       "id": 9
+    },
+    {
+      "phone": "111111111",
+      "cpf": "0123456",
+      "birthDate": "1977-01-14",
+      "grade": 100,
+      "name": "João",
+      "id": 10
     }
   ],
   "accompaniments": [

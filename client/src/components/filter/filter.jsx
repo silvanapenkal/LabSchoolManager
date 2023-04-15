@@ -21,7 +21,6 @@ function CourseFilter({ onFilter }) {
       <Input
         type="text"
         placeholder="O que deseja buscar?"
-        labelText="Buscar"
         value={filter}
         onChange={handleChangeFilter}
       />

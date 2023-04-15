@@ -1,10 +1,11 @@
 import Toolbar from "./components/toolbar/toolbar";
 import UserRegister from "./pages/userRegister/userRegister";
 import Login from "./pages/login/login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthenticationProvider } from "./hooks/useAuthentication";
 import StudentRegister from "./pages/studentRegister/studentRegister";
 import AccompanimentRegister from "./pages/accompanimentRegister/accompanimentRegister";
+import StudentList from "./pages/studentList/studentList";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AuthenticationProvider>
         <div className="App">
           <Routes>
+            <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<UserRegister />} />
             <Route
@@ -37,6 +39,14 @@ function App() {
               element={
                 <>
                   <Toolbar />
+                </>
+              }
+            />
+            <Route
+              path="/alunos"
+              element={
+                <>
+                  <StudentList />
                 </>
               }
             />
