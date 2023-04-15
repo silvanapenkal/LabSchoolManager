@@ -8,8 +8,8 @@ const useAccompanimentList = () => {
 
   const fetchData = async (filter) => {
     setIsLoading(true)
-    const paramFilter = filter ? `?userName_like=${filter}` : ''
-    const response = await apiService.get(`accompaniments?_expand=user&_expand=student${paramFilter}`)
+    const paramFilter = filter ? `title_like=${filter}&` : ''
+    const response = await apiService.get(`accompaniments?${paramFilter}_expand=user&_expand=student`)
     setError(response.error)
     setData(response.data)
     setIsLoading(false)
