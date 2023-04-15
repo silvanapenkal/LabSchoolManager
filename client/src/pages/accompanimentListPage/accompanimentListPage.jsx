@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 function AccompanimentListPage() {
   const navigate = useNavigate();
   const { data, error, isLoading, fetchData } = useAccompanimentList();
-  console.log(data)
 
   return (
     <>

@@ -14,10 +14,10 @@ function AccompanimentList({ list }) {
             date={item.date}
             title={item.title}
           >
-            <p>Pedadogo: {item.userId}</p>
-            <p>Aluno: {item.studentId}</p>
-            <p>Título: {item.title}</p>
-            <p>Data: {item.date}</p>
+            <p>Pedadogo: {item?.user?.name}</p>
+            <p>Aluno: {item?.student?.name}</p>
+            <p>Título: {item?.title}</p>
+            <p>Data: {item?.date}</p>
           </Card>
         </li>
       ))}
