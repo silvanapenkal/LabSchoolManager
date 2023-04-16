@@ -36,7 +36,7 @@ function Toolbar() {
           </Button>
         </ButtonDiv>
       </StyledDiv>
-      <h4>{user?.name}</h4>
+      <p>{user?.name}</p>
     </ToolBarDiv>
   );
 }
