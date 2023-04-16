@@ -1,25 +1,25 @@
 import AccompanimentList from "../../components/list/accompanimentList";
-import Filter from "../../components/filter/filter";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
 import Button from "../../components/button/button";
 import Toolbar from "../../components/toolbar/toolbar";
 import useAccompanimentList from "../../hooks/useAccompanimentList";
 import { useNavigate } from "react-router-dom";
+import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import { useEffect } from "react";
 
-function AccompanimentListPage() {
+function UserAccompanimentListPage() {
   const navigate = useNavigate();
-  const { data, error, isLoading, fetchData } = useAccompanimentList();
-
-  useEffect(()=>{
-    fetchData()
-  },[])
+  const {user} = useAuthenticationContext()
+  const {data, isLoading, error, getUserAccompaniments } = useAccompanimentList();
+ 
+  useEffect(() => {
+    getUserAccompaniments(user.id)
+  }, [])
 
   return (
     <>
       <Toolbar />
       <PageWrapper>
-        <Filter onFilter={fetchData} />
 
         {isLoading && <h1>Carregando...</h1>}
 
@@ -39,4 +39,4 @@ function AccompanimentListPage() {
   );
 }
 
-export default AccompanimentListPage;
+export default UserAccompanimentListPage;

@@ -7,12 +7,13 @@ import StudentRegister from "./pages/studentRegister/studentRegister";
 import AccompanimentRegister from "./pages/accompanimentRegister/accompanimentRegister";
 import StudentList from "./pages/studentList/studentList";
 import AccompanimentListPage from "./pages/accompanimentListPage/accompanimentListPage";
-import AccompanimentEditPage from "./pages/accompanimentEditPage/accompanimenteEditPage";
+import AccompanimentEditPage from "./pages/accompanimentEditPage/accompanimentEditPage";
+import UserAccompanimentListPage from "./pages/home/home";
 
 function App() {
   return (
     <BrowserRouter>
-      <AuthenticationProvider>
+      <AuthenticationProvider >
         <div className="App">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
@@ -36,7 +37,12 @@ function App() {
                 </>
               }
             />
-            <Route path="/home" element={<><Toolbar /></>} />
+            <Route
+              path="/home"
+              element={
+                <UserAccompanimentListPage />
+              }
+            />
             <Route path="/alunos" element={<StudentList />} />
             <Route
               path="/acompanhamentos"

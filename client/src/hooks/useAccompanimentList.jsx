@@ -19,11 +19,25 @@ const useAccompanimentList = () => {
     fetchData()
   },[])
 
+  const getUserAccompaniments = async (user) => {
+    console.log("dentro do hook", user)
+    setIsLoading(true)
+    const response = await apiService.get(`/accompaniments?finished=false&userId=${user}&_expand=user&_expand=student`)
+    setError(response.error)
+    setData(response.data)
+    setIsLoading(false)
+  }
+
+  useEffect(() => {
+    getUserAccompaniments()
+  },[])
+
   return {
     data,
     isLoading,
     error,
-    fetchData
+    fetchData,
+    getUserAccompaniments
   }
 
   
