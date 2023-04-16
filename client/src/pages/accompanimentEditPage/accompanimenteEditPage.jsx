@@ -7,6 +7,7 @@ import useAccompanimentDetails from "../../hooks/useAccompanimentDetails";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate, useParams } from "react-router-dom";
+import Checkbox from "../../components/checkbox/checkbox";
 
 const schema = yup.object().shape({
   studentId: yup.number().required("Campo obrigatório"),
@@ -36,7 +37,7 @@ function AccompanimentEditPage() {
         date: "",
         title: "",
         description: "",
-        finished: ""
+        finished: "false"
     },
     values: {
       studentId: data?.studentId,
@@ -92,12 +93,7 @@ function AccompanimentEditPage() {
             helperText={errors?.description?.message}
             {...register("description")}
           />
-          <p> Atendimento finalizado
-          <Input
-            type="checkbox"
-            {...register("finished")}
-          />
-          </p> 
+          <Checkbox labelText="Concluído" {...register("finished")}/>
           <ButtonDiv>
             <Button type="submit" >Atualizar</Button>
             <Button type="button" onClick={() => navigate("/acompanhamentos")}>

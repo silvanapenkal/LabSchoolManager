@@ -20,7 +20,6 @@ const useAccompanimentDetails = (id) => {
 
   useEffect(() => {
     fetchData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const accompanimentPut = async (data) => {

@@ -19,10 +19,6 @@ const useAccompanimentList = () => {
     fetchData()
   },[])
 
-
-  
-  
-
   return {
     data,
     isLoading,
