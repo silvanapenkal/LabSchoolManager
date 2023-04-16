@@ -29,12 +29,12 @@ function AccompanimentRegister() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-        studentId: "",
-        userId: "",
-        date: "",
-        title: "",
-        description: "",
-        finished: false
+      studentId: "",
+      userId: "",
+      date: "",
+      title: "",
+      description: "",
+      finished: false,
     },
     resolver: yupResolver(schema),
   });
@@ -43,14 +43,16 @@ function AccompanimentRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    postRequest('/accompaniments', data);
+    postRequest("/accompaniments", data);
     navigate("/home");
   };
 
   return (
     <PageWrapper>
       <StyledCard>
-        <h1 className="register-page-section-title">Agendamento do atendimento</h1>
+        <h1 className="register-page-section-title">
+          Agendamento do atendimento
+        </h1>
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
           <Input
             labelText="Id do estudante"
@@ -87,9 +89,11 @@ function AccompanimentRegister() {
             type="string"
             helperText={errors?.finished?.message}
             {...register("finished")}
-          />     
+          />
           <ButtonDiv>
-            <Button type="submit" onSubmit={handleSubmit(onSubmit)}>Cadastrar</Button>
+            <Button type="submit" onSubmit={handleSubmit(onSubmit)}>
+              Cadastrar
+            </Button>
             <Button type="button" onClick={() => navigate("/home")}>
               Cancelar
             </Button>

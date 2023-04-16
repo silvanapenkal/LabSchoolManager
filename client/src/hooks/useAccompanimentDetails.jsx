@@ -25,9 +25,7 @@ const useAccompanimentDetails = (id) => {
     setIsLoading(true);
     if (data) {
       const response = await apiService.put(`accompaniments/${data.id}`, data);
-      console.log("dentro do put", data);
       setError(response.error);
-      console.log("error: ", error);
       setData(response.data);
     }
     setIsLoading(false);

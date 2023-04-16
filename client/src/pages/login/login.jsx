@@ -34,7 +34,7 @@ function Login() {
   const handleLoginAction = async (event) => {
     event.preventDefault();
     setError(null);
-    
+
     setShowEmailHelper(!email);
     setShowPasswordHelper(!password);
     if (!email || !password) {
@@ -63,10 +63,10 @@ function Login() {
           onChange={handleChangePassword}
           helperText={showPasswordHelper ? "Campo obrigatório" : ""}
         />
-        <Button>
-          Entrar
+        <Button>Entrar</Button>
+        <Button type="button" onClick={() => navigate("/register")}>
+          Cadastrar
         </Button>
-        <Button type="button" onClick={() => navigate("/register")}>Cadastrar</Button>
       </form>
     </PageWrapper>
   );

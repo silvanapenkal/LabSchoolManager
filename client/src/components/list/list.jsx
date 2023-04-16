@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import Card from '../../components/card/card'
-import { StyledList } from './styles';
+import PropTypes from "prop-types";
+import Card from "../../components/card/card";
+import { StyledList } from "./styles";
 
 function List({ list }) {
   return (
@@ -22,7 +22,7 @@ function List({ list }) {
         </StyledList>
       ))}
     </ul>
-  )
+  );
 }
 
 List.propTypes = {
@@ -31,13 +31,13 @@ List.propTypes = {
       name: PropTypes.string.isRequired,
       phone: PropTypes.string.isRequired,
       birthDate: PropTypes.string.isRequired,
-      grade: PropTypes.number.isRequired
+      grade: PropTypes.number.isRequired,
     })
-  )
-}
+  ),
+};
 
 List.defaultProps = {
-  list: []
-}
+  list: [],
+};
 
-export default List
+export default List;

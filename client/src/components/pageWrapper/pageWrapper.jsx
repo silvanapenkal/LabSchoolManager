@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types'
-import { StyledPage } from './styles'
+import PropTypes from "prop-types";
+import { StyledPage } from "./styles";
 
 function PageWrapper({ children }) {
-  return <StyledPage className="pageWrapperContainer">{children}</StyledPage>
+  return <StyledPage className="pageWrapperContainer">{children}</StyledPage>;
 }
 
 PageWrapper.propTypes = {
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};
 
-export default PageWrapper
+export default PageWrapper;
