@@ -9,23 +9,25 @@ import { useEffect } from "react";
 
 function UserAccompanimentListPage() {
   const navigate = useNavigate();
-  const {user} = useAuthenticationContext()
-  const {data, isLoading, error, getUserAccompaniments } = useAccompanimentList();
- 
+  const { user } = useAuthenticationContext();
+  const { data, isLoading, error, getUserAccompaniments } =
+    useAccompanimentList();
+
   useEffect(() => {
-    getUserAccompaniments(user?.id)
-  }, [])
+    getUserAccompaniments(user?.id);
+  }, []);
 
   return (
     <>
       <Toolbar />
       <PageWrapper>
-
         {isLoading && <h1>Carregando...</h1>}
 
         {!isLoading && !!error && <p>{error}</p>}
 
-        {!isLoading && !error && !!data.length && <AccompanimentList list={data} />}
+        {!isLoading && !error && !!data.length && (
+          <AccompanimentList list={data} />
+        )}
 
         {!isLoading && !error && !data.length && (
           <h1>Nenhum atendimento cadatrado</h1>

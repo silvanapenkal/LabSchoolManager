@@ -49,8 +49,6 @@ function AccompanimentEditPage() {
 
   const onSubmit = (data) => {
     data.id = id;
-    console.log("id: ", id);
-    console.log("data: ", data);
     accompanimentPut(data);
     navigate("/home");
   };

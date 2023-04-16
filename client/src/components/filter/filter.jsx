@@ -25,7 +25,9 @@ function CourseFilter({ onFilter }) {
         onChange={handleChangeFilter}
       />
 
-      <Button type="button" onClick={handleClickFilter}>Buscar</Button>
+      <Button type="button" onClick={handleClickFilter}>
+        Buscar
+      </Button>
     </FilterContainer>
   );
 }

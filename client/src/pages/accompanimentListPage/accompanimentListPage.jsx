@@ -11,9 +11,9 @@ function AccompanimentListPage() {
   const navigate = useNavigate();
   const { data, error, isLoading, fetchData } = useAccompanimentList();
 
-  useEffect(()=>{
-    fetchData()
-  },[])
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -25,7 +25,9 @@ function AccompanimentListPage() {
 
         {!isLoading && !!error && <p>{error}</p>}
 
-        {!isLoading && !error && !!data.length && <AccompanimentList list={data} />}
+        {!isLoading && !error && !!data.length && (
+          <AccompanimentList list={data} />
+        )}
 
         {!isLoading && !error && !data.length && (
           <h1>Nenhum atendimento cadatrado</h1>

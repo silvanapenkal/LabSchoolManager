@@ -41,7 +41,7 @@ function StudentRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    postRequest('/students', data);
+    postRequest("/students", data);
     navigate("/home");
   };
 
@@ -79,9 +79,11 @@ function StudentRegister() {
             type="number"
             helperText={errors?.email?.message}
             {...register("grade")}
-          />     
+          />
           <ButtonDiv>
-            <Button type="submit" onSubmit={handleSubmit(onSubmit)}>Cadastrar</Button>
+            <Button type="submit" onSubmit={handleSubmit(onSubmit)}>
+              Cadastrar
+            </Button>
             <Button type="button" onClick={() => navigate("/home")}>
               Cancelar
             </Button>

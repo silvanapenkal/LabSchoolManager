@@ -7,7 +7,7 @@ import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import Logo from "../../components/logo/logo"
+import Logo from "../../components/logo/logo";
 
 const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
@@ -19,7 +19,6 @@ const schema = yup.object().shape({
 });
 
 function UserRegister() {
-  
   const navigate = useNavigate();
 
   const {
@@ -42,8 +41,8 @@ function UserRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
-    postRequest('/register', data);
-    navigate('/login');
+    postRequest("/register", data);
+    navigate("/login");
   };
 
   return (
