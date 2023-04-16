@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 import Card from '../../components/card/card'
-
+import Button from "../button/button";
+import { useNavigate } from "react-router-dom";
 
 function AccompanimentList({ list }) {
+  const navigate = useNavigate();
+
   return (
     <ul>
       {list.map((item) => (
@@ -18,6 +21,7 @@ function AccompanimentList({ list }) {
             <p>Aluno: {item?.student?.name}</p>
             <p>Título: {item?.title}</p>
             <p>Data: {item?.date}</p>
+            <Button onClick={()=> navigate(`/accompaniments/${item?.id}`)}>Editar</Button>
           </Card>
         </li>
       ))}
@@ -29,7 +33,7 @@ AccompanimentList.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       userName: PropTypes.string,
-      studentName: PropTypes.string.isRequired,
+      studentName: PropTypes.string,
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired
     })

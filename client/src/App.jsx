@@ -7,6 +7,7 @@ import StudentRegister from "./pages/studentRegister/studentRegister";
 import AccompanimentRegister from "./pages/accompanimentRegister/accompanimentRegister";
 import StudentList from "./pages/studentList/studentList";
 import AccompanimentListPage from "./pages/accompanimentListPage/accompanimentListPage";
+import AccompanimentEditPage from "./pages/accompanimentEditPage/accompanimenteEditPage";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
                 </>
               }
             />
-          <Route
+            <Route
               path="/accompaniment"
               element={
                 <>
@@ -35,24 +36,19 @@ function App() {
                 </>
               }
             />
+            <Route path="/home" element={<><Toolbar /></>} />
+            <Route path="/alunos" element={<StudentList />} />
             <Route
-              path="/home"
+              path="/acompanhamentos"
+              element={<AccompanimentListPage />}
+            />
+            <Route
+              path="/accompaniments/:id"
               element={
                 <>
                   <Toolbar />
+                  <AccompanimentEditPage />
                 </>
-              }
-            />
-            <Route
-              path="/alunos"
-              element={
-                  <StudentList />
-              }
-            />
-              <Route
-              path="/acompanhamentos"
-              element={
-                  <AccompanimentListPage />
               }
             />
           </Routes>

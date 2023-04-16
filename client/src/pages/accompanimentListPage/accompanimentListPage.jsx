@@ -26,8 +26,8 @@ function AccompanimentListPage() {
           <h1>Nenhum atendimento cadatrado</h1>
         )}
 
-        <Button type="button" onClick={() => navigate("/edit/accompaniment")}>
-          Editar acompanhamento
+        <Button type="button" onClick={() => navigate("/home")}>
+          Voltar
         </Button>
       </PageWrapper>
     </>
