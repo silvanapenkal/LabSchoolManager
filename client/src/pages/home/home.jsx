@@ -13,7 +13,7 @@ function UserAccompanimentListPage() {
   const {data, isLoading, error, getUserAccompaniments } = useAccompanimentList();
  
   useEffect(() => {
-    getUserAccompaniments(user.id)
+    getUserAccompaniments(user?.id)
   }, [])
 
   return (

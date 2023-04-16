@@ -30,6 +30,9 @@ function AccompanimentListPage() {
         {!isLoading && !error && !data.length && (
           <h1>Nenhum atendimento cadatrado</h1>
         )}
+        <Button type="button" onClick={() => navigate("/accompaniment")}>
+          Cadastrar novo atendimento
+        </Button>
 
         <Button type="button" onClick={() => navigate("/home")}>
           Voltar
