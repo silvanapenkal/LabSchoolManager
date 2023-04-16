@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-
 import { apiService } from '../services/api'
 
 const useAccompanimentDetails = (id) => {
@@ -35,7 +34,6 @@ const useAccompanimentDetails = (id) => {
   useEffect(() => {
     accompanimentPut()
   },[])
-
 
   return {
     data,

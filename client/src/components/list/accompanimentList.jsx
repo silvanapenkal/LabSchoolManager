@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import Card from '../../components/card/card'
 import Button from "../button/button";
 import { useNavigate } from "react-router-dom";
+import { StyledList } from './styles';
 
 function AccompanimentList({ list }) {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function AccompanimentList({ list }) {
   return (
     <ul>
       {list.map((item) => (
-        <li key={item.id}>
+        <StyledList key={item.id}>
           <Card
             id={item.id}
             userName={item.userId}
@@ -23,7 +24,7 @@ function AccompanimentList({ list }) {
             <p>Data: {item?.date}</p>
             <Button onClick={()=> navigate(`/accompaniments/${item?.id}`)}>Editar</Button>
           </Card>
-        </li>
+        </StyledList>
       ))}
     </ul>
   )
@@ -35,7 +36,8 @@ AccompanimentList.propTypes = {
       userName: PropTypes.string,
       studentName: PropTypes.string,
       title: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired
+      date: PropTypes.string.isRequired,
+      finished:PropTypes.bool.isRequired
     })
   )
 }
