@@ -43,7 +43,7 @@ function UserRegister() {
 
   const onSubmit = (data) => {
     postRequest('/register', data);
-    navigate('/student');
+    navigate('/login');
   };
 
   return (

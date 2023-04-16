@@ -71,6 +71,15 @@
       "birthDate": "1977-01-14",
       "cpf": "919.192.749-87",
       "id": 8
+    },
+    {
+      "email": "sil3@teste.com.br",
+      "password": "$2a$10$J4PiTvCbAtdaZbIlQw99qOGHUHfEdCm0MMdCsE6VjmtPaV./CLx0e",
+      "name": "teste de novo usuário",
+      "phone": "437333",
+      "birthDate": "2010-01-02",
+      "cpf": "5776576",
+      "id": 9
     }
   ],
   "students": [
@@ -125,13 +134,13 @@
   ],
   "accompaniments": [
     {
-      "id": 1,
       "studentId": 3,
       "userId": 2,
       "date": "27/03/2023",
       "title": "Acompanhamento teste",
-      "description": "Descrição do acompanhamento",
-      "finished": true
+      "description": "Edição",
+      "finished": true,
+      "id": 1
     },
     {
       "finished": false,
@@ -139,7 +148,7 @@
       "title": "primeiro",
       "date": "2023-04-14",
       "userId": 1,
-      "studentId": 1,
+      "studentId": 4,
       "id": 2
     }
   ]

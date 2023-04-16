@@ -13,7 +13,7 @@ function Toolbar() {
   return (
     <ToolBarDiv>
         <StyledDiv>
-          <Logo />
+          <Logo type="button" onClick={() => navigate('/home')}/>
           <ButtonDiv>
             <Button type="button" onClick={() => navigate('/alunos')}>
               <img
