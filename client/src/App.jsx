@@ -9,11 +9,12 @@ import StudentList from "./pages/studentList/studentList";
 import AccompanimentListPage from "./pages/accompanimentListPage/accompanimentListPage";
 import AccompanimentEditPage from "./pages/accompanimentEditPage/accompanimentEditPage";
 import UserAccompanimentListPage from "./pages/home/home";
+import NotFound from "./pages/pageNotFound/pageNotFound";
 
 function App() {
   return (
     <BrowserRouter>
-      <AuthenticationProvider >
+      <AuthenticationProvider>
         <div className="App">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
@@ -37,12 +38,7 @@ function App() {
                 </>
               }
             />
-            <Route
-              path="/home"
-              element={
-                <UserAccompanimentListPage />
-              }
-            />
+            <Route path="/home" element={<UserAccompanimentListPage />} />
             <Route path="/alunos" element={<StudentList />} />
             <Route
               path="/acompanhamentos"
@@ -57,6 +53,7 @@ function App() {
                 </>
               }
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </AuthenticationProvider>

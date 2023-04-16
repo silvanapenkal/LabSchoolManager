@@ -19,11 +19,8 @@ const schema = yup.object().shape({
 });
 
 function AccompanimentEditPage() {
-
-  const {id} = useParams()
-
+  const { id } = useParams();
   const navigate = useNavigate();
-
   const { data, accompanimentPut } = useAccompanimentDetails(id);
 
   const {
@@ -32,12 +29,12 @@ function AccompanimentEditPage() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-        studentId:"",
-        userId: "",
-        date: "",
-        title: "",
-        description: "",
-        finished: "false"
+      studentId: "",
+      userId: "",
+      date: "",
+      title: "",
+      description: "",
+      finished: "false",
     },
     values: {
       studentId: data?.studentId,
@@ -45,17 +42,15 @@ function AccompanimentEditPage() {
       date: data?.date,
       title: data?.title,
       description: data?.description,
-      finished: data?.finished
-  },
+      finished: data?.finished,
+    },
     resolver: yupResolver(schema),
   });
 
-  console.log("data fora", data)
-
   const onSubmit = (data) => {
-    data.id= id
-    console.log("id: ",id)
-    console.log("data: ",data)
+    data.id = id;
+    console.log("id: ", id);
+    console.log("data: ", data);
     accompanimentPut(data);
     navigate("/home");
   };
@@ -82,7 +77,7 @@ function AccompanimentEditPage() {
             {...register("date")}
           />
           <Input
-            labelText= "Título do atendimento"
+            labelText="Título do atendimento"
             type="string"
             helperText={errors?.title?.message}
             {...register("title")}
@@ -93,9 +88,9 @@ function AccompanimentEditPage() {
             helperText={errors?.description?.message}
             {...register("description")}
           />
-          <Checkbox labelText="Concluído" {...register("finished")}/>
+          <Checkbox labelText="Concluído" {...register("finished")} />
           <ButtonDiv>
-            <Button type="submit" >Atualizar</Button>
+            <Button type="submit">Atualizar</Button>
             <Button type="button" onClick={() => navigate("/acompanhamentos")}>
               Cancelar
             </Button>
