@@ -161,12 +161,12 @@
   ],
   "accompaniments": [
     {
-      "finished": false,
-      "description": "By using React's useState Hook and an event handler, we can keep track of the checkbox's value via React's state. Next we may want to create a Checkbox component which can be used more than once throughout a React project. Therefore, we will extract it as a new function component and pass the necessary props to it:By using React's useState Hook and an event handler, we can keep track of the checkbox's value via React's state. Next we may want to create a Checkbox component which can be used more than once throughout a React project. Therefore, we will extract it as a new function component and pass the necessary props to it:",
-      "title": "Teste 2",
-      "date": "27/03/2023",
-      "userId": 10,
       "studentId": 4,
+      "userId": 10,
+      "date": "27/03/2023",
+      "title": "Teste 2",
+      "description": "By using React's useState Hook and an event handler, we can keep track of the checkbox's value via React's state. Next we may want to create a Checkbox component which can be used more than once throughout a React project. Therefore, we will extract it as a new function component and pass the necessary props to it:By using React's useState Hook and an event handler, we can keep track of the checkbox's value via React's state. Next we may want to create a Checkbox component which can be used more than once throughout a React project. Therefore, we will extract it as a new function component and pass the necessary props to it:",
+      "finished": true,
       "id": 1
     },
     {
@@ -179,12 +179,12 @@
       "id": 2
     },
     {
-      "finished": false,
-      "description": "surtou com o projeto",
-      "title": "aluno maluco",
-      "date": "2023-04-17",
-      "userId": 10,
       "studentId": 3,
+      "userId": 10,
+      "date": "2023-04-17",
+      "title": "aluno maluco",
+      "description": "surtou com o projeto",
+      "finished": true,
       "id": 3
     },
     {
