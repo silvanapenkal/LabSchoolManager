@@ -13,10 +13,11 @@ Para rodar o projeto:
 
 Sugestões de melhorias
 
-- edição de alunos
-- edição de usuários
+- implementar edição de alunos
+- implementar edição de usuários
 - conectar com banco de dados através do backend feito em java
 - melhorar a forma de apresentação dos erros para o usuário
+- fazer regex para conferir cpf, telefone, data
 
 Trello do projeto
 https://trello.com/b/A0bQjGog/lab-school-manager
