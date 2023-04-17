@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import Card from "../../components/card/card";
-import { StyledList } from "./styles";
+import { StyledList, StyledUl } from "./styles";
 
 function List({ list }) {
   return (
-    <ul>
+    <StyledUl>
       {list.map((item) => (
         <StyledList key={item.id}>
           <Card
@@ -21,7 +21,7 @@ function List({ list }) {
           </Card>
         </StyledList>
       ))}
-    </ul>
+    </StyledUl>
   );
 }
 

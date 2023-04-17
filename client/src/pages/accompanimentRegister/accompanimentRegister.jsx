@@ -1,13 +1,14 @@
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
-import { ButtonDiv, StyledCard, StyledForm } from "./styles";
+import { ButtonDiv, StyledCard, StyledForm, StyledTitle } from "./styles";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
+import Checkbox from "../../components/checkbox/checkbox"
 
 const schema = yup.object().shape({
   studentId: yup.number().required("Campo obrigatório"),
@@ -22,6 +23,9 @@ function AccompanimentRegister() {
   // eslint-disable-next-line no-unused-vars
   const [content, setContent] = useState({ value: "", error: "" });
   const navigate = useNavigate();
+  const inicialDate= new Date().toLocaleDateString("he-il").replace('.', '/').replace('.', '/')
+  console.log(inicialDate)
+
 
   const {
     register,
@@ -31,7 +35,7 @@ function AccompanimentRegister() {
     defaultValues: {
       studentId: "",
       userId: "",
-      date: "",
+      date: `${inicialDate}`,
       title: "",
       description: "",
       finished: false,
@@ -50,9 +54,9 @@ function AccompanimentRegister() {
   return (
     <PageWrapper>
       <StyledCard>
-        <h1 className="register-page-section-title">
+        <StyledTitle className="register-page-section-title">
           Agendamento do atendimento
-        </h1>
+        </StyledTitle>
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
           <Input
             labelText="Id do estudante"
@@ -68,7 +72,7 @@ function AccompanimentRegister() {
           />
           <Input
             labelText="Data do atendimento"
-            type="date"
+            type="string"
             helperText={errors?.date?.message}
             {...register("date")}
           />
@@ -84,12 +88,7 @@ function AccompanimentRegister() {
             helperText={errors?.description?.message}
             {...register("description")}
           />
-          <Input
-            labelText="Status do atendimento"
-            type="string"
-            helperText={errors?.finished?.message}
-            {...register("finished")}
-          />
+          <Checkbox labelText="Concluído" {...register("finished")} />
           <ButtonDiv>
             <Button type="submit" onSubmit={handleSubmit(onSubmit)}>
               Cadastrar

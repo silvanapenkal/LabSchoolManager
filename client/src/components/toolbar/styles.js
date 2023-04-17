@@ -9,6 +9,7 @@ export const ToolBarDiv = styled.div`
   background-color: aquamarine;
   padding: 16px;
   width: 100vw;
+  gap: 16px;
 `;
 
 export const StyledDiv = styled.div`

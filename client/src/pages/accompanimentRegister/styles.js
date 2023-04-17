@@ -27,3 +27,13 @@ export const ButtonDiv = styled.div`
   justify-content: center;
   width: 100vw;
 `;
+
+export const StyledTitle = styled.div`
+  font-size: 1.5rem;
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+`

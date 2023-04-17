@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const StyledDiv = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  width: 450px;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: 0.6rem;
 
   @media (max-width: 500px) {
     width: 300px;
@@ -16,3 +15,10 @@ export const StyledDiv = styled.div`
     width: 100px;
   }
 `;
+
+export const StyledImg = styled.img`
+  width: 52px;
+  @media (max-width: 400px) {
+    width: 28px;
+  }
+`

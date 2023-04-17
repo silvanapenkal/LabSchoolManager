@@ -19,7 +19,7 @@ const schema = yup.object().shape({
 });
 
 function UserRegister() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const {
     register,
@@ -91,7 +91,7 @@ function UserRegister() {
             labelText="Confirme a senha"
             type="password"
             helperText={errors?.password?.message}
-            {...register("password")}
+            {...register("passwordConfirmation")}
           />
           <ButtonDiv>
             <Button type="submit">Cadastrar</Button>
