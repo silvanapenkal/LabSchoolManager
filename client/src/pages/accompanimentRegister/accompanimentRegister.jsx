@@ -24,8 +24,6 @@ function AccompanimentRegister() {
   const [content, setContent] = useState({ value: "", error: "" });
   const navigate = useNavigate();
   const inicialDate= new Date().toLocaleDateString("he-il").replace('.', '/').replace('.', '/')
-  console.log(inicialDate)
-
 
   const {
     register,
