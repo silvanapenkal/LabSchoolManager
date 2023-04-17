@@ -5,7 +5,7 @@
 
 Para rodar o projeto:
 
-- baixar o projeto
+- clonar o projeto
 - na pasta client, rodar npm install
 - na pasta client, rodar npm run dev
 - na pasta server, rodar npm install
