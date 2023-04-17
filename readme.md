@@ -23,3 +23,6 @@ https://trello.com/b/A0bQjGog/lab-school-manager
 
 Figma do projeto
 https://www.figma.com/file/Xo3RrjCwq5jc6tBwOXfDE6/LabSchoolManager?node-id=0-1&t=3BeuZPja1NNUZQUm-0
+
+Vídeo de apresentação do projeto
+https://drive.google.com/file/d/1OccO3qbvzCp5HHUxEOZ71pa1zKs8b73M/view?usp=sharing
