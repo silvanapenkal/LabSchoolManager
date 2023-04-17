@@ -7,12 +7,20 @@ import { useNavigate } from "react-router-dom";
 function Toolbar() {
   const { user, logout } = useAuthenticationContext();
   const navigate = useNavigate();
+  const userName = localStorage.getItem("userName")
 
   return (
     <ToolBarDiv>
       <StyledDiv>
-        <Logo type="button" onClick={() => navigate("/home")} />
+        <Logo />
         <ButtonDiv>
+        <Button type="button" onClick={() => navigate("/home")}>
+            <img
+              src="../../src/assets/home.svg"
+              aria-label="home"
+              width="32px"
+            />
+          </Button>
           <Button type="button" onClick={() => navigate("/alunos")}>
             <img
               src="../../src/assets/student.svg"
@@ -36,7 +44,7 @@ function Toolbar() {
           </Button>
         </ButtonDiv>
       </StyledDiv>
-      <p>{user?.name}</p>
+      <p>Pedagogo: {userName}</p>
     </ToolBarDiv>
   );
 }

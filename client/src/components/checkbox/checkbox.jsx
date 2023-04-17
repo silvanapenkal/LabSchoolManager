@@ -8,12 +8,12 @@ const Checkbox = forwardRef(({ id, labelText, helperText, ...props }, ref) => {
   return (
     <CheckBoxContainer className="container">
       {labelText && (
-        <CheckBoxLabel htmlFor={refId} className="label">
+        <CheckBoxLabel htmlFor={refId} className="label" >
           {labelText}
         </CheckBoxLabel>
       )}
 
-      <input type="checkbox" id={refId} ref={ref} {...props} />
+      <input type="checkbox" aria-label="concluído" id={refId} ref={ref} {...props} />
     </CheckBoxContainer>
   );
 });

@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 import Card from "../../components/card/card";
 import Button from "../button/button";
 import { useNavigate } from "react-router-dom";
-import { StyledList } from "./styles";
+import { StyledList, StyledUl } from "./styles";
 
 function AccompanimentList({ list }) {
   const navigate = useNavigate();
 
   return (
-    <ul>
+    <StyledUl>
       {list.map((item) => (
         <StyledList key={item.id}>
           <Card
@@ -28,7 +28,7 @@ function AccompanimentList({ list }) {
           </Card>
         </StyledList>
       ))}
-    </ul>
+    </StyledUl>
   );
 }
 
