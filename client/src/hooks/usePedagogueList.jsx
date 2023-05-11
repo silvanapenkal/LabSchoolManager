@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { apiService } from "../services/api";
 
-const useList = () => {
+const usePedagogueList = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const fetchData = async (filter) => {
     setIsLoading(true);
-    const paramFilter = filter ? `?name_like=${filter}` : "";
-    const response = await apiService.get(`/students${paramFilter}`);
+    const response = await apiService.get(`/users`);
     setError(response.error);
     setData(response.data);
     setIsLoading(false);
@@ -20,11 +19,11 @@ const useList = () => {
   }, []);
 
   return {
-    data,
+    pedagogueList: data,
     isLoading,
     error,
     fetchData,
   };
 };
 
-export default useList;
+export default usePedagogueList;

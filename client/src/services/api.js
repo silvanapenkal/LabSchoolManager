@@ -5,6 +5,12 @@ const api = axios.create({
   headers: {'Authorization': `Bearer ${localStorage.getItem("token")}`}
 })
 
+api.interceptors.request.use( (config)=> {
+  const token = localStorage.getItem('token');
+  config.headers.Authorization = token ? `Bearer ${token}` : '';
+  return config;
+  });
+
 const handleGet = async (endpoint) => {
   try {
     const response = await api.get(endpoint)

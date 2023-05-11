@@ -1,6 +1,5 @@
 import AccompanimentList from "../../components/list/accompanimentList";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
-import Toolbar from "../../components/toolbar/toolbar";
 import useAccompanimentList from "../../hooks/useAccompanimentList";
 import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import { useEffect } from "react";
@@ -16,7 +15,6 @@ function UserAccompanimentListPage() {
 
   return (
     <>
-      <Toolbar />
       <PageWrapper>
         {isLoading && <h1>Carregando...</h1>}
 

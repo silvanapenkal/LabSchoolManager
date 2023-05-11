@@ -1,10 +1,11 @@
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
-import PageWrapper from "../../components/pageWrapper/pageWrapper";
 import Logo from "../../components/logo/logo";
+import { StyledPage } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuthenticationContext } from "../../hooks/useAuthentication";
+
 
 function Login() {
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ function Login() {
   };
 
   return (
-    <PageWrapper>
+    <StyledPage>
       <Logo />
       <form onSubmit={handleLoginAction}>
         <Input
@@ -68,7 +69,7 @@ function Login() {
           Cadastrar
         </Button>
       </form>
-    </PageWrapper>
+    </StyledPage>
   );
 }
 
