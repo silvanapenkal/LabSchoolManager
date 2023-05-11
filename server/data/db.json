@@ -9,6 +9,35 @@
       "cpf": "12345678910",
       "passwordConfirmation": "novasenha",
       "id": 1
+    },
+    {
+      "email": "marina@gmail.com",
+      "password": "$2a$10$buVaMeWU3DiKg/fKe3hW3OcWv0cco.9KEjnMk6abefw2hDFEZrulK",
+      "name": "Marina Hoffmann",
+      "phone": "12345678910",
+      "birthDate": "2000-10-10",
+      "cpf": "12345678910",
+      "passwordConfirmation": "senhateste",
+      "id": 2
+    },
+    {
+      "email": "tiago@email.com",
+      "password": "$2a$10$kXeBM3RYl8RsMpWS8yjcA.CUxTU6OPPkmoezSIAPZpZPzTVOVQ.wu",
+      "name": "Tiago Albuquerque",
+      "phone": "12345678910",
+      "birthDate": "2000-10-10",
+      "cpf": "12345678910",
+      "passwordConfirmation": "senhateste",
+      "id": 3
+    },
+    {
+      "email": "ivan@email.com",
+      "password": "$2a$10$DCinSOk7bUN5tMgJ.SrHn.Z.GYKwvXi75ds7Q.WAxlU4sj.Rbq5Tu",
+      "name": "Ivan Roumeliotis",
+      "phone": "12345678910",
+      "birthDate": "1977-09-27",
+      "cpf": "12345678910",
+      "id": 4
     }
   ],
   "students": [
@@ -35,26 +64,60 @@
       "grade": 9,
       "name": "Luciano",
       "id": 3
+    },
+    {
+      "phone": "12345678910",
+      "cpf": "12345678910",
+      "birthDate": "2000-10-10",
+      "grade": 9,
+      "name": "Thiago",
+      "id": 4
+    },
+    {
+      "phone": "12345678910",
+      "cpf": "12345678910",
+      "birthDate": "2010-10-10",
+      "grade": 0,
+      "name": "José",
+      "id": 5
     }
   ],
   "accompaniments": [
     {
-      "finished": false,
-      "description": "Aluna está desempenhando bem. É necessário estimular seu aprendizado com tarefas mais difíceis.",
-      "title": "Novos desafios",
-      "date": "2023-05-12",
-      "userId": 1,
       "studentId": 1,
+      "userId": 1,
+      "date": "2023-05-12",
+      "title": "Excelente aluna",
+      "description": "Aluna está desempenhando bem. É necessário estimular seu aprendizado com tarefas mais difíceis.",
+      "finished": false,
       "id": 1
     },
     {
-      "studentId": 2,
-      "userId": 1,
-      "date": "2023-05-10",
-      "title": "Aluno destaque",
-      "description": "Aluno destaque, para ser nota 10 só falta abrir a câmera nos eventos online.",
       "finished": true,
+      "description": "Aluno destaque, para ser nota 10 só falta abrir a câmera nos eventos online.",
+      "title": "Aluno destaque",
+      "date": "2023-05-10",
+      "userId": 1,
+      "studentId": 2,
       "id": 2
+    },
+    {
+      "finished": false,
+      "description": "Aluno muito esforçado, mas precisa abrir a câmera.",
+      "title": "Aluno aplicado",
+      "date": "2023-05-11",
+      "userId": 1,
+      "studentId": 3,
+      "id": 3
+    },
+    {
+      "finished": false,
+      "description": "Aluno surtou com o projeto",
+      "title": "Urgente",
+      "date": "2023-05-11",
+      "userId": 2,
+      "studentId": 5,
+      "id": 4
     }
   ]
 }

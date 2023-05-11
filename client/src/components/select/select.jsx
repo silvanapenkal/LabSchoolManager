@@ -15,7 +15,7 @@ const Select = forwardRef(
             </option>
           ))}
         </StyledSelect>
-        {!!helperText && <span>{helperText}</span>}
+        {!!helperText && <span>Inválido</span>}
       </SelectContainer>
     );
   }

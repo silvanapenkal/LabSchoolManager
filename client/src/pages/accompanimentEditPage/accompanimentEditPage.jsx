@@ -65,7 +65,7 @@ function AccompanimentEditPage() {
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
         <Select
             id="estudante"
-            labelText="Id do estudante"
+            labelText="Estudante"
             placeholder="Selecione"
             inputName = "estudante"
             data = {studentList}
@@ -74,7 +74,7 @@ function AccompanimentEditPage() {
           ></Select>
           <Select
             id="pedagogo"
-            labelText="Id do pedagogo"
+            labelText="Pedagogo"
             placeholder="Selecione"
             inputName = "pedagogo"
             data = {pedagogueList}

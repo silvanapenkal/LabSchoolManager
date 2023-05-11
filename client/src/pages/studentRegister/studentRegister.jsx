@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
-  grade: yup.number("Deve ser um número").min(0,"A nota deve ser entre 0 e 10").max(100,"A nota deve ser entre 0 e 10").required("Campo obrigatório"),
+  grade: yup.number("Deve ser um número").moreThan(-1,"A nota deve ser entre 0 e 10").lessThan(11,"A nota deve ser entre 0 e 10").required("Campo obrigatório"),
   birthDate: yup.string().required("Campo obrigatório"),
   cpf: yup.string().required("Campo obrigatório"),
   phone: yup.string().required("Campo obrigatório"),

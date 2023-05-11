@@ -19,13 +19,12 @@ const schema = yup.object().shape({
   password: yup
     .string()
     .required("Campo obrigatório")
-    .min(8, "A senha precisa ter pelo menos 8 caracteres")
-    .oneOf([yup.ref("passwordConfirmation"), null], "As senhas devem ser iguais"),
+    .min(8, "A senha precisa ter pelo menos 8 caracteres"),
   passwordConfirmation: yup
     .string()
     .required("Campo obrigatório")
     .min(8, "A senha precisa ter pelo menos 8 caracteres")
-    .oneOf([yup.ref("password"), null], "As senhas devem ser iguais"),
+    .oneOf([yup.ref("password")], "As senhas devem ser iguais"),
   phone: yup
     .string()
     .required("Campo obrigatório")
@@ -55,6 +54,7 @@ function UserRegister() {
   const { isSubmitting, postRequest } = useUserRegister();
 
   const onSubmit = (data) => {
+    delete data.passwordConfirmation
     postRequest("/register", data);
     navigate("/login");
   };
@@ -102,6 +102,7 @@ function UserRegister() {
             {...register("password")}
           />
           <Input
+            id='passwordConfirm'
             labelText="Confirme a senha"
             type="password"
             helperText={errors?.password?.message}

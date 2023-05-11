@@ -30,10 +30,6 @@ function AccompanimentRegister() {
   const {pedagogueList} = usePedagogueList();
 
   const navigate = useNavigate();
-  const inicialDate = new Date()
-    .toLocaleDateString("he-il")
-    .replace(".", "/")
-    .replace(".", "/");
 
   const {
     register,
@@ -43,7 +39,7 @@ function AccompanimentRegister() {
     defaultValues: {
       studentId: "",
       userId: "",
-      date: `${inicialDate}`,
+      date: "",
       title: "",
       description: "",
       finished: false,
