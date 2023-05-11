@@ -8,7 +8,10 @@ import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import Checkbox from "../../components/checkbox/checkbox"
+import Checkbox from "../../components/checkbox/checkbox";
+import Select from "../../components/select/select";
+import useStudentList from "../../hooks/useStudentList";
+import usePedagogueList from "../../hooks/usePedagogueList";
 
 const schema = yup.object().shape({
   studentId: yup.number().required("Campo obrigatório"),
@@ -22,8 +25,15 @@ const schema = yup.object().shape({
 function AccompanimentRegister() {
   // eslint-disable-next-line no-unused-vars
   const [content, setContent] = useState({ value: "", error: "" });
+
+  const { studentList } = useStudentList();
+  const {pedagogueList} = usePedagogueList();
+
   const navigate = useNavigate();
-  const inicialDate= new Date().toLocaleDateString("he-il").replace('.', '/').replace('.', '/')
+  const inicialDate = new Date()
+    .toLocaleDateString("he-il")
+    .replace(".", "/")
+    .replace(".", "/");
 
   const {
     register,
@@ -56,21 +66,27 @@ function AccompanimentRegister() {
           Agendamento do atendimento
         </StyledTitle>
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
-          <Input
-            labelText="Id do estudante"
-            placeholder="Digite o id do estudante"
+          <Select
+            id="estudante"
+            labelText="Estudante"
+            placeholder="Selecione"
+            inputName = "estudante"
+            data = {studentList}
             helperText={errors?.studentId?.message}
             {...register("studentId")}
-          />
-          <Input
-            labelText="Id do pedagogo"
-            placeholder="Digite o id do pedagogo"
+          ></Select>
+          <Select
+            id="pedagogo"
+            labelText="Pedagogo"
+            placeholder="Selecione"
+            inputName = "pedagogo"
+            data = {pedagogueList}
             helperText={errors?.userId?.message}
             {...register("userId")}
-          />
+          ></Select>
           <Input
             labelText="Data do atendimento"
-            type="string"
+            type="date"
             helperText={errors?.date?.message}
             {...register("date")}
           />

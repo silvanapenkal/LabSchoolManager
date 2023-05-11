@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Card from "../../components/card/card";
+import Card from "../card/card";
 import { StyledList, StyledUl } from "./styles";
 
 function List({ list }) {

@@ -2,7 +2,6 @@ import AccompanimentList from "../../components/list/accompanimentList";
 import Filter from "../../components/filter/filter";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
 import Button from "../../components/button/button";
-import Toolbar from "../../components/toolbar/toolbar";
 import useAccompanimentList from "../../hooks/useAccompanimentList";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -17,7 +16,6 @@ function AccompanimentListPage() {
 
   return (
     <>
-      <Toolbar />
       <PageWrapper>
         <Filter onFilter={fetchData} />
 

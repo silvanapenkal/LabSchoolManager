@@ -1,7 +1,6 @@
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
-import PageWrapper from "../../components/pageWrapper/pageWrapper";
-import { ButtonDiv, StyledCard, StyledForm } from "./styles";
+import { ButtonDiv, StyledCard, StyledForm, StyledPage } from "./styles";
 import { useForm } from "react-hook-form";
 import useUserRegister from "../../hooks/useUserRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -13,13 +12,28 @@ const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
   email: yup.string().email("Deve ser um e-mail").required("Campo obrigatório"),
   birthDate: yup.string().required("Campo obrigatório"),
-  cpf: yup.string().required("Campo obrigatório"),
-  password: yup.string().required("Campo obrigatório").min(8),
-  phone: yup.string().required("Campo obrigatório"),
+  cpf: yup
+    .string()
+    .required("Campo obrigatório")
+    .min(11, "O cpf deve ter no mínimo 11 caracteres"),
+  password: yup
+    .string()
+    .required("Campo obrigatório")
+    .min(8, "A senha precisa ter pelo menos 8 caracteres")
+    .oneOf([yup.ref("passwordConfirmation"), null], "As senhas devem ser iguais"),
+  passwordConfirmation: yup
+    .string()
+    .required("Campo obrigatório")
+    .min(8, "A senha precisa ter pelo menos 8 caracteres")
+    .oneOf([yup.ref("password"), null], "As senhas devem ser iguais"),
+  phone: yup
+    .string()
+    .required("Campo obrigatório")
+    .min(11, "O telefone deve ter no mínimo 11 caracteres"),
 });
 
 function UserRegister() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const {
     register,
@@ -46,7 +60,7 @@ function UserRegister() {
   };
 
   return (
-    <PageWrapper>
+    <StyledPage>
       <Logo />
       <StyledCard>
         <h1 className="register-page-section-title">Cadastro de usuário</h1>
@@ -101,7 +115,7 @@ function UserRegister() {
           </ButtonDiv>
         </StyledForm>
       </StyledCard>
-    </PageWrapper>
+    </StyledPage>
   );
 }
 

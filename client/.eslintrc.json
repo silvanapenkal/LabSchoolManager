@@ -21,7 +21,8 @@
         "react", "jsx-a11y"
     ],
     "rules": {
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "react/display-name": "warn"
     },
     "settings": {
         "react": {

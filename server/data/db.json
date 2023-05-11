@@ -2,217 +2,59 @@
   "users": [
     {
       "email": "silvanapenkal@gmail.com",
-      "password": "$2a$10$W8Ks2Dt1cQFp5qv/0NJVmOOfh9k5v88Wng0AUZ4.rre6quYY.rW6e",
-      "name": "SILVANA PENKAL SANTOS",
-      "phone": "2430653237",
-      "birthDate": "1977-01-14",
-      "cpf": "02539158994",
-      "id": 1
-    },
-    {
-      "email": "ivan@gmail.com",
-      "password": "$2a$10$f9LaHBAB.lGtpBR3kqSEauQmh1aEDDw.1BB1OaJHABoakHtz9adei",
-      "name": "ivan",
-      "phone": "2430653237",
-      "birthDate": "1977-01-14",
-      "cpf": "91919274987",
-      "id": 2
-    },
-    {
-      "email": "teste@teste.com",
-      "password": "$2a$10$IKU1fm7HUxUmHaTWzEJ3re2mXlEysv06KBh/PbFSGlKc5Zx/7.t9i",
-      "name": "Teste",
-      "phone": "014",
-      "birthDate": "1977-01-14",
-      "cpf": "02539158994",
-      "id": 3
-    },
-    {
-      "email": "teste@teste.com.br",
-      "password": "$2a$10$74eBEYRmKaUEYWVNkTh9C.swXsQ6zIo6GiYGHfqFDNt0o8ywyk1RO",
-      "name": "Teste",
-      "phone": "014",
-      "birthDate": "1977-01-14",
-      "cpf": "02539158994",
-      "id": 4
-    },
-    {
-      "email": "joao@teste.com",
-      "password": "$2a$10$dzUdC0PMsamJrjmAX8Is6u.tQHO2aPN1YxRxEDTOLWoxh1qxPJRf.",
-      "name": "Usuário 11",
-      "phone": "2430653237",
-      "birthDate": "1977-01-14",
-      "cpf": "02539158994",
-      "id": 5
-    },
-    {
-      "email": "sil@teste.com.br",
-      "password": "$2a$10$JdoWvS7mm51XUkgNZU2yteEgqr8QQRnUI8aJUyHNBFoZbTs2UOChq",
-      "name": "SILVANA PENKAL SANTOS 3",
-      "phone": "2430653237",
-      "birthDate": "1977-01-14",
-      "cpf": "032.683.409-91",
-      "id": 6
-    },
-    {
-      "email": "teste@teste.br",
-      "password": "$2a$10$jKL4OJoDMbcJMeJnUNLap.QQ1kiLJca/dOiEHxD7xPdudNBD.ONBm",
-      "name": "teste",
-      "phone": "2430653237",
-      "birthDate": "12002-10-01",
-      "cpf": "919.192.749-87",
-      "id": 7
-    },
-    {
-      "email": "sil2@teste.com.br",
-      "password": "$2a$10$VbKCHFmXP4UpCl8jSnJX1eSWjAwyrj7nem1NotUPOoE.0Lc9ktjIa",
-      "name": "SILVANA PENKAL SANTOS",
-      "phone": "2430653237",
-      "birthDate": "1977-01-14",
-      "cpf": "919.192.749-87",
-      "id": 8
-    },
-    {
-      "email": "sil3@teste.com.br",
-      "password": "$2a$10$J4PiTvCbAtdaZbIlQw99qOGHUHfEdCm0MMdCsE6VjmtPaV./CLx0e",
-      "name": "teste de novo usuário",
-      "phone": "437333",
-      "birthDate": "2010-01-02",
-      "cpf": "5776576",
-      "id": 9
-    },
-    {
-      "email": "sil4@teste.com.br",
-      "password": "$2a$10$m7.v4aVZHJNOGhpGrHnDGO9rbsr1rgSIfqr7nHtWxogu5wnE0M72e",
+      "password": "$2a$10$IX6bEV5og0S5qWWDfYqsyen.tioNyViAQ9uGN9ymxcWj3EsxfxaHC",
       "name": "Silvana Penkal Santos",
       "phone": "47991306919",
       "birthDate": "1977-01-14",
-      "cpf": "91919274987",
-      "id": 10
-    },
-    {
-      "email": "sil5@teste.com.br",
-      "password": "$2a$10$ClqJYgEOHukYe4pPCNc/wuv3i0MpDdabW9RvIsNzIMGD55MzH.vBe",
-      "name": "Novo Usuário da Silva",
-      "phone": "(44) 99256-2345",
-      "birthDate": "2001-01-10",
-      "cpf": "111111111111111",
-      "passwordConfirmation": "senhateste",
-      "id": 11
+      "cpf": "12345678910",
+      "passwordConfirmation": "novasenha",
+      "id": 1
     }
   ],
   "students": [
     {
-      "name": "Teste aluno",
-      "phone": "(99) 99999-9999",
-      "birthDate": "01/01/1990",
-      "cpf": "999.999.999-99",
-      "grade": 80,
-      "id": 3
-    },
-    {
-      "name": "Teste aluno 8",
-      "phone": "(99) 99999-9998",
-      "birthDate": "01/01/1998",
-      "cpf": "999.999.999-98",
-      "grade": 80,
-      "id": 4
-    },
-    {
-      "name": "Teste aluno 8",
-      "phone": "(99) 99999-9998",
-      "birthDate": "01/01/1998",
-      "cpf": "999.999.999-98",
-      "grade": 80,
-      "id": 5
-    },
-    {
-      "phone": "47991306919",
-      "cpf": "02539158994",
-      "birthDate": "2010-01-02",
+      "phone": "012345678910",
+      "cpf": "012345678910",
+      "birthDate": "2000-10-10",
       "grade": 10,
-      "name": "Joaquim Rogério Santos Roumeliotis ",
-      "id": 8
+      "name": "Fabiane",
+      "id": 1
     },
     {
-      "phone": "47991306919",
-      "cpf": "02539158994",
-      "birthDate": "2006-06-12",
-      "grade": 100,
-      "name": "Heitor",
-      "id": 9
+      "phone": "01234567890",
+      "cpf": "01234567890",
+      "birthDate": "2015-10-10",
+      "grade": 10,
+      "name": "João Marcelino",
+      "id": 2
     },
     {
-      "phone": "111111111",
-      "cpf": "0123456",
-      "birthDate": "1977-01-14",
-      "grade": 100,
-      "name": "João",
-      "id": 10
-    },
-    {
-      "phone": "(47) 99130-6919",
-      "cpf": "032.683.309-91",
-      "birthDate": "2012-06-12",
-      "grade": 100,
-      "name": "Heitor",
-      "id": 11
+      "phone": "12345678910",
+      "cpf": "12345678910",
+      "birthDate": "2010-10-10",
+      "grade": 9,
+      "name": "Luciano",
+      "id": 3
     }
   ],
   "accompaniments": [
     {
       "finished": false,
-      "description": "By using React's useState Hook and an event handler, we can keep track of the checkbox's value via React's state. Next we may want to create a Checkbox component which can be used more than once throughout a React project. Therefore, we will extract it as a new function component and pass the necessary props to it:By using React's useState Hook and an event handler, we can keep track of the checkbox's value via React's state. Next we may want to create a Checkbox component which can be used more than once throughout a React project. Therefore, we will extract it as a new function component and pass the necessary props to it:",
-      "title": "Teste 2",
-      "date": "27/03/2023",
-      "userId": 10,
-      "studentId": 4,
+      "description": "Aluna está desempenhando bem. É necessário estimular seu aprendizado com tarefas mais difíceis.",
+      "title": "Novos desafios",
+      "date": "2023-05-12",
+      "userId": 1,
+      "studentId": 1,
       "id": 1
     },
     {
-      "studentId": 4,
+      "studentId": 2,
       "userId": 1,
-      "date": "2023-04-14",
-      "title": "primeiro",
-      "description": "atendimento",
+      "date": "2023-05-10",
+      "title": "Aluno destaque",
+      "description": "Aluno destaque, para ser nota 10 só falta abrir a câmera nos eventos online.",
       "finished": true,
       "id": 2
-    },
-    {
-      "finished": false,
-      "description": "surtou com o projeto",
-      "title": "aluno maluco",
-      "date": "2023-04-17",
-      "userId": 10,
-      "studentId": 3,
-      "id": 3
-    },
-    {
-      "studentId": 3,
-      "userId": 9,
-      "date": "2023-04-23",
-      "title": "urgente",
-      "description": "hoje ainda",
-      "finished": true,
-      "id": 4
-    },
-    {
-      "studentId": 3,
-      "userId": 9,
-      "date": "2023-04-16",
-      "title": "novo",
-      "description": "mais um urgente",
-      "finished": true,
-      "id": 5
-    },
-    {
-      "finished": true,
-      "description": "teste",
-      "title": "mais um maluco",
-      "date": "16/4/2023",
-      "userId": 9,
-      "studentId": 4,
-      "id": 6
     }
   ]
 }

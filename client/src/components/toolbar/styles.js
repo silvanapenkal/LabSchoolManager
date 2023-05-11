@@ -10,6 +10,7 @@ export const ToolBarDiv = styled.div`
   padding: 16px;
   width: 100vw;
   gap: 16px;
+  margin-bottom: 8px;
 `;
 
 export const StyledDiv = styled.div`

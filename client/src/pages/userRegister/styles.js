@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const StyledPage = styled.div`
+  padding: 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+`;
+
 export const StyledCard = styled.div`
   width: 90vw;
   padding: 16px 16px;

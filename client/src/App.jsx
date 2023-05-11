@@ -1,4 +1,3 @@
-import Toolbar from "./components/toolbar/toolbar";
 import UserRegister from "./pages/userRegister/userRegister";
 import Login from "./pages/login/login";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -17,27 +16,11 @@ function App() {
       <AuthenticationProvider>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<UserRegister />} />
-            <Route
-              path="/student"
-              element={
-                <>
-                  <Toolbar />
-                  <StudentRegister />
-                </>
-              }
-            />
-            <Route
-              path="/accompaniment"
-              element={
-                <>
-                  <Toolbar />
-                  <AccompanimentRegister />
-                </>
-              }
-            />
+            <Route path="/student" element={<StudentRegister />} />
+            <Route path="/accompaniment" element={<AccompanimentRegister />} />
             <Route path="/home" element={<UserAccompanimentListPage />} />
             <Route path="/alunos" element={<StudentList />} />
             <Route
@@ -46,12 +29,7 @@ function App() {
             />
             <Route
               path="/accompaniments/:id"
-              element={
-                <>
-                  <Toolbar />
-                  <AccompanimentEditPage />
-                </>
-              }
+              element={<AccompanimentEditPage />}
             />
             <Route path="*" element={<NotFound />} />
           </Routes>

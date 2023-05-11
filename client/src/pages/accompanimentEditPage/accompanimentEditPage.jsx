@@ -1,13 +1,16 @@
+import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 import PageWrapper from "../../components/pageWrapper/pageWrapper";
-import { ButtonDiv, StyledCard, StyledForm } from "./styles";
-import { useForm } from "react-hook-form";
-import useAccompanimentDetails from "../../hooks/useAccompanimentDetails";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { useNavigate, useParams } from "react-router-dom";
 import Checkbox from "../../components/checkbox/checkbox";
+import Select from "../../components/select/select";
+import useAccompanimentDetails from "../../hooks/useAccompanimentDetails";
+import usePedagogueList from "../../hooks/usePedagogueList";
+import useStudentList from "../../hooks/useStudentList";
+import { ButtonDiv, StyledCard, StyledForm } from "./styles";
 
 const schema = yup.object().shape({
   studentId: yup.number().required("Campo obrigatório"),
@@ -22,6 +25,8 @@ function AccompanimentEditPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { data, accompanimentPut } = useAccompanimentDetails(id);
+  const { studentList } = useStudentList();
+  const {pedagogueList} = usePedagogueList();
 
   const {
     register,
@@ -58,19 +63,27 @@ function AccompanimentEditPage() {
       <StyledCard>
         <h1 className="register-page-section-title">Dados do atendimento</h1>
         <StyledForm id="register-user-form" onSubmit={handleSubmit(onSubmit)}>
-          <Input
+        <Select
+            id="estudante"
             labelText="Id do estudante"
+            placeholder="Selecione"
+            inputName = "estudante"
+            data = {studentList}
             helperText={errors?.studentId?.message}
             {...register("studentId")}
-          />
-          <Input
+          ></Select>
+          <Select
+            id="pedagogo"
             labelText="Id do pedagogo"
+            placeholder="Selecione"
+            inputName = "pedagogo"
+            data = {pedagogueList}
             helperText={errors?.userId?.message}
             {...register("userId")}
-          />
+          ></Select>
           <Input
             labelText="Data do atendimento"
-            type="string"
+            type="date"
             helperText={errors?.date?.message}
             {...register("date")}
           />
