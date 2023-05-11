@@ -25,6 +25,7 @@ const schema = yup.object().shape({
 function AccompanimentRegister() {
   // eslint-disable-next-line no-unused-vars
   const [content, setContent] = useState({ value: "", error: "" });
+
   const { studentList } = useStudentList();
   const {pedagogueList} = usePedagogueList();
 

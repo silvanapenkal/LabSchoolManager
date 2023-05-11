@@ -5,12 +5,12 @@ import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import { useEffect } from "react";
 
 function UserAccompanimentListPage() {
-  const { user } = useAuthenticationContext();
+  const userId  = localStorage.getItem("userId")
   const { data, isLoading, error, getUserAccompaniments } =
     useAccompanimentList();
 
   useEffect(() => {
-    getUserAccompaniments(user?.id);
+    getUserAccompaniments(userId);
   }, []);
 
   return (
